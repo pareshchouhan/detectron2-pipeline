@@ -1,6 +1,6 @@
-_BASE_: "../../../detectron2/configs/COCO-PanopticSegmentation/Base-Panoptic-FPN.yaml"
+_BASE_: "Base-Panoptic-FPN.yaml"
 MODEL:
-  WEIGHTS: "detectron2://COCO-PanopticSegmentation/panoptic_fpn_R_50_3x/139514569/model_final_c10459.pkl"
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
   RESNETS:
     DEPTH: 50
 SOLVER:

@@ -1,6 +1,6 @@
-_BASE_: "../../../detectron2/configs/Base-RetinaNet.yaml"
+_BASE_: "../Base-RetinaNet.yaml"
 MODEL:
-  WEIGHTS: "detectron2://COCO-Detection/retinanet_R_50_FPN_3x/137849486/model_final_4cafe0.pkl"
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
   RESNETS:
     DEPTH: 50
 SOLVER:
