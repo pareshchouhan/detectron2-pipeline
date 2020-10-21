@@ -27,10 +27,10 @@ Install Detectron2 in a folder one level above the `detectron2-pipeline` project
     $ cd ..
     $ git clone https://github.com/facebookresearch/detectron2.git
     $ cd detectron2
-    $ git checkout 3def12bdeaacd35c6f7b3b6c0097b7bc31f31ba4
+    $ git checkout b5358cb74b188c41761a12489340729d1f989a34
     $ python setup.py build develop
     
-We checkout `3def12bdeaacd35c6f7b3b6c0097b7bc31f31ba4` commit to ensure that you can use the code
+We checkout `b5358cb74b188c41761a12489340729d1f989a34` commit to ensure that you can use the code
 out of the box with this repo.
 
 If you got any problems with Detectron2 installation please refer to
@@ -73,3 +73,16 @@ $ pytest
 ## License
 
 [MIT License](LICENSE)
+
+
+## Troubleshooting
+
+* if you get error like `ImportError: /detectron2/detectron2/_C.cpython-36m-x86_64-linux-gnu.so: undefined symbol: _ZN6caffe26detail37_typeMetaDataInstance_preallocated_32E` ,   
+
+Run the following commands  
+remove old detectron2 folder.  
+```sh
+git clone https://github.com/facebookresearch/detectron2.git  
+
+python -m pip install -e detectron2
+```

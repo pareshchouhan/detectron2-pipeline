@@ -65,7 +65,7 @@ class SeparateBackground(Pipeline):
 
         # Multiply the background with ( 1 - mask )
         background = cv2.multiply(background, 1.0 - mask)
-
+        
         # Add the masked foreground and background
         dst_image = cv2.add(foreground, background)
 
