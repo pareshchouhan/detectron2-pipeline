@@ -6,7 +6,7 @@ from detectron2 import model_zoo
 def setup_cfg(config_file, weights_file=None, config_opts=[], confidence_threshold=None, cpu=False):
     # load config from file and command-line arguments
     cfg = get_cfg()
-    cfg.merge_from_file(config_file)
+    cfg.merge_from_file(model_zoo.get_config_file(config_file.replace("configs/", "")))
     cfg.merge_from_list(config_opts)
     if confidence_threshold is not None:
         # Set score_threshold for builtin models
